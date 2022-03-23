@@ -1,9 +1,11 @@
 const express = require("express");
-const { v4, validate} = require("uuid");
+const { v4, validate } = require("uuid");
+const cors = require('cors');
 
 const app = express();
 
-app.use(express.json())
+app.use(cors());
+app.use(express.json());
 
 const projects = [];
 
